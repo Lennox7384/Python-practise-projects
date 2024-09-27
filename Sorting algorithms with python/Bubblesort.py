@@ -31,3 +31,8 @@ print ("Sorted array is:")
 for i in range (len(arr)):
     print ( arr[i])
     
+
+
+#WORKS CITED
+
+#“Sorting Algorithms in Python.” GeeksforGeeks, GeeksforGeeks, 14 May 2024, www.geeksforgeeks.org/sorting-algorithms-in-python/#. 
