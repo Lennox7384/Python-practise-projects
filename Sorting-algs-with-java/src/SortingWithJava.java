@@ -1,22 +1,31 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 public class SortingWithJava{
 
-        public static void main(String [] args)
+        public static void main(String [] args)  //Main method setup.
         {
-            // First we are going to implement bubble sort with loops
+            // Implementation of bubble sort with loops
 
-            //Create an array of integers targeted
+             int arr []= {37,26,24,77,29, 67, 8,1,0,41};
 
-            int arr []= {37,26,24,77,29, 67, 8,1,0,41};
+            
+            // Quick copy of above integer array. We'll need it later
+            int copiedArr [] = new int [arr.length];
+            System.arraycopy(arr, 0, copiedArr, 0, arr.length);
 
-            //Now implement the loops such that swapping occurs and numbers rearranged
+            //Declare and Initialise a new array in wrapper class.
+            Integer arr2 []= new Integer[]{32,56,39,29,59,94,93,72,24,84,65};
 
+
+            //Loop Implementation
             for (int i=0;i<arr.length;i++)
             {
-                // Notice that this inner loop points to an index ahead of the ouiter loop. 
-                for(int ii=i+1;ii<arr.length;ii++) 
+                
+                for(int ii=i+1;ii<arr.length;ii++) // Notice inner loop points to 1 index ahead of the outer loop. 
                 {
+                    
                     //Swapping 
-
                     int temporaryHold=0;
                     if(arr[ii]<arr[i])
                     {
@@ -25,12 +34,36 @@ public class SortingWithJava{
                         arr[ii]=temporaryHold;
                     }
 
-                }
-
-                //Now print every elemtn of the sorted Array
-
-                System.out.println(arr[i]+" ");
+                } 
             }
+
+            System.out.printf("Sorted by for actual looping : %s", Arrays.toString(arr));
+
+            // -----------------------------------------------------------------
+            //Now lets do the same sort.
+            //and other library components like the sort() method of Aray class. 
+            //------------------------------------------------------------------
+
+            System.out.println("\n");
+
+            Arrays.sort(copiedArr);
+            System.out.printf("Sorted by sort () Method only: %s", Arrays.toString(copiedArr));
+
+            for(int i=0;i<copiedArr.length;i++)
+            {
+                
+            }
+            
+            //-----------------------------------------------------------------
+            // Now, we'll use collections utility class 
+            // And the sort method to perform the same sort.
+            //-----------------------------------------------------------------
+
+            System.out.println("\n");
+
+            Arrays.sort(arr2,Collections.reverseOrder());
+            System.out.printf("Collections and Array class components involved: %s", Arrays.toString(arr2));
+            System.out.println("\n");
 
         }
 
