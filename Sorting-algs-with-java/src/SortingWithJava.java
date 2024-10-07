@@ -7,7 +7,7 @@ public class SortingWithJava{
         {
             // Implementation of bubble sort with loops
 
-             int arr []= {37,26,24,77,29, 67, 8,1,0,41};
+             int arr []= {37,26, 26, 24,77,29, 67, 8,1,0,41};
 
             
             // Quick copy of above integer array. We'll need it later
@@ -24,7 +24,6 @@ public class SortingWithJava{
                 
                 for(int ii=i+1;ii<arr.length;ii++) // Notice inner loop points to 1 index ahead of the outer loop. 
                 {
-                    
                     //Swapping 
                     int temporaryHold=0;
                     if(arr[ii]<arr[i])
